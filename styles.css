@@ -1,0 +1,84 @@
+body {
+    background-color: #EDF4FF;
+    font-family: Arial, sans-serif;
+    color: #07184D;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px ;
+}
+
+#logo {
+    position: fixed;
+    top: 05px;  /* adjust as needed */
+    left: 10px;  /* adjust as needed */
+    width: 20%;
+}
+
+
+.logo-placeholder {
+    flex: 1;
+    text-align: center;
+}
+
+.logo-placeholder img {
+    max-width: 100%;
+    height: auto;
+}
+
+.utm-builder {
+    flex: 3;
+    padding-right: 50px;
+}
+
+.utm-builder h2,
+.utm-builder label {
+    color: #07184D;
+}
+
+.utm-builder input[type="text"],
+.utm-builder input[type="url"],
+.utm-builder button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.copy-button {
+    margin-left: 10px;
+}
+
+button {
+    background-color: #07184D; /* Orange */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px; /* Reduced font size */
+    padding: 20px 10px; /* Reduced padding */
+    margin-bottom: 20px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out; /* This will make the hover transition smoother */
+}
+
+button:hover {
+    background-color: #ff8c00; 
+    transform: scale(1.1); /* Scales the button up to 110% */
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #07184D;
+    color: white;
+    text-align: center;
+    border-top: 2px #07184D;
+    padding: 10px 0;
+}

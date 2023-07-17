@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20min UTM Builder</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.png" type="image/png" sizes="32x32">
+</head>
+<body>
+    <div class="container">
+        <div class="logo-placeholder">
+            <img id="logo" src="img/logo.png" alt="Logo" />
+        </div>
+        <div class="utm-builder">
+            <h2>20min UTM Builder</h2>
+            <form id="utm-form">
+                <div id="url-container">
+                    <label for="url-0">Your URL:</label>
+                    <input type="url" id="url-0" name="url-0" required>
+                </div>
+
+                <button type="button" id="add-url">Add more URL(s)</button>
+
+                <label for="source">UTM Source:</label>
+                <input type="text" id="source" name="source">
+
+                <label for="medium">UTM Medium:</label>
+                <input type="text" id="medium" name="medium">
+
+                <label for="campaign">UTM Campaign:</label>
+                <input type="text" id="campaign" name="campaign">
+
+                <button type="submit">Generate URLs</button>
+            </form>
+
+            <div id="generated-urls-container"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+    <footer>
+        <p>&copy; 20min Data Team</p>
+    </footer>
+
+</body>
+</html>
