@@ -3,7 +3,7 @@ let urlCount = 1;
 document.getElementById('add-url').addEventListener('click', function() {
     let newLabel = document.createElement('label');
     newLabel.setAttribute('for', 'url-' + urlCount);
-    newLabel.textContent = 'Base URL:';
+    newLabel.textContent = 'Your URL:';
 
     let newInput = document.createElement('input');
     newInput.setAttribute('type', 'url');
