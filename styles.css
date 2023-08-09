@@ -122,16 +122,34 @@ footer {
     display: flex;
     justify-content: center;
     margin-top: 10px;
-    flex-wrap: nowrap; /* Prevent wrapping to the next line */
-    overflow-x: auto; /* Allow horizontal scrolling if buttons exceed container width */
+    flex-wrap: nowrap;
+    overflow-x: auto;
 }
 
 .preset {
     border: none;
     background-color: #C929FF;
     padding: 8px 16px;
-    margin: 5px; /* Adjust margin as needed */
+    margin: 5px;
     cursor: pointer;
     border-radius: 5px;
-    white-space: nowrap; /* Prevent button text from wrapping */
+    white-space: nowrap;
+    transition: background-color 0.2s;
+}
+
+/* Flash animation for the preset button */
+@keyframes flash {
+    0% {
+        background-color: #f2f2f2;
+    }
+    50% {
+        background-color: #ffc107;
+    }
+    100% {
+        background-color: #f2f2f2;
+    }
+}
+
+.preset.flash {
+    animation: flash 0.5s;
 }
