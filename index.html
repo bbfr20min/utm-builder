@@ -11,7 +11,7 @@
     <div class="container">
         <div class="logo-placeholder">
             <img id="logo" src="img/logo.png" alt="20min logo" />
-            <h1 class="title">UTM parameter builder</h1>
+            <h1 class="title">UTM builder</h1>
         </div>
         <div class="utm-builder">
             <form id="utm-form">
@@ -19,19 +19,33 @@
                     <label for="url-0">Your URL:</label>
                     <input type="url" id="url-0" name="url-0" required>
                 </div>
-
+                
                 <button type="button" id="add-url">Add more URL(s)</button>
+                
+                <div class="utms">
+                    <div class="preset-buttons">
+                        <button class="preset" data-source="instagram" data-medium="organic" data-campaign="story">IG - story</button>
+                        <button class="preset"> <strike>FB - TBA</strike> *</button>
+                        <button class="preset"> <strike>LN - TBA</strike> *</button>
+                        <button class="preset"> <strike>Threads - WHAT?</strike> *</button>
 
-                <label for="source">UTM Source:</label>
-                <input type="text" id="source" name="source">
+    
+                    </div>
 
-                <label for="medium">UTM Medium:</label>
-                <input type="text" id="medium" name="medium">
+                    <p>Please note that buttons with <strong> * ARE NOT </strong> in the use at the moment</p>
+                    
+                    <label for="source">UTM Source:</label>
+                    <input type="text" id="source" name="source">
 
-                <label for="campaign">UTM Campaign:</label>
-                <input type="text" id="campaign" name="campaign">
+                    <label for="medium">UTM Medium:</label>
+                    <input type="text" id="medium" name="medium">
 
-                <button type="submit" id="generate-urls">Generate URLs</button>
+                    <label for="campaign">UTM Campaign:</label>
+                    <input type="text" id="campaign" name="campaign">
+
+                    <button type="submit" id="generate-urls">Generate URLs</button>
+                </div>
+                
             </form>
 
             <div id="generated-urls-container"></div>
@@ -43,6 +57,5 @@
     <footer>
         <p>&copy; 20min Data Team</p>
     </footer>
-
 </body>
 </html>

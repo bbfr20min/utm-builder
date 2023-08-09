@@ -57,6 +57,21 @@ document.getElementById('utm-form').addEventListener('submit', function(event) {
     }
 });
 
+// Add a click event listener to each preset button
+const presetButtons = document.querySelectorAll('.preset');
+presetButtons.forEach(button => {
+    button.addEventListener('click', function() {
+        const source = this.getAttribute('data-source');
+        const medium = this.getAttribute('data-medium');
+        const campaign = this.getAttribute('data-campaign');
+        
+        document.getElementById('source').value = source;
+        document.getElementById('medium').value = medium;
+        document.getElementById('campaign').value = campaign;
+    });
+});
+
+
 function buildUTMUrl(baseURL, utmSource, utmMedium, utmCampaign) {
     let url = new URL(baseURL);
     if (utmSource) {

@@ -31,6 +31,10 @@ body {
     margin-top: 20px;
 }
 
+p {
+    font-size: 12px;
+}
+
 .utm-builder {
     flex: 3;
     width: 100%;
@@ -111,4 +115,23 @@ footer {
     .utm-builder button {
         margin: 10px;
     }
+}
+
+/* Additional styles for preset buttons */
+.preset-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    flex-wrap: nowrap; /* Prevent wrapping to the next line */
+    overflow-x: auto; /* Allow horizontal scrolling if buttons exceed container width */
+}
+
+.preset {
+    border: none;
+    background-color: #C929FF;
+    padding: 8px 16px;
+    margin: 5px; /* Adjust margin as needed */
+    cursor: pointer;
+    border-radius: 5px;
+    white-space: nowrap; /* Prevent button text from wrapping */
 }
