@@ -1,6 +1,33 @@
+@font-face {
+    font-family: 'BatonTurbo';
+    font-weight: 400; /* Regular */
+    font-style: normal;
+    src: 
+        url('./fonts/BatonTurboWeb-Regular.woff2') format('woff2'),
+        url('./fonts/BatonTurboWeb-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'BatonTurbo';
+    font-weight: 700; /* Bold */
+    font-style: normal;
+    src: 
+        url('./fonts/BatonTurboWeb-Bold.woff2') format('woff2'),
+        url('./fonts/BatonTurboWeb-Bold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'BatonTurbo';
+    font-weight: 200; /* Thin */
+    font-style: normal;
+    src: 
+        url('./fonts/BatonTurboWeb-Book.woff2') format('woff2'),
+        url('./fonts/BatonTurboWeb-Book.woff') format('woff');
+}
+
 body {
     background-color: #EDF4FF;
-    font-family: Arial, sans-serif;
+    font-family: 'BatonTurbo', Arial, sans-serif;
     color: #07184D;
 }
 
@@ -32,7 +59,9 @@ body {
 }
 
 p {
+    font-family: 'BatonTurbo', Arial, sans-serif;
     font-size: 12px;
+    font-weight: 200;
 }
 
 .utm-builder {
@@ -76,6 +105,7 @@ p {
 }
 
 button {
+    font-family: 'BatonTurbo', Arial, sans-serif;
     border-radius: 50px;
     background-color: #07184D;
     border: none;
