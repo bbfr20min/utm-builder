@@ -59,7 +59,8 @@ document.getElementById('utm-form').addEventListener('submit', function(event) {
     }
 });
 
-// Add a click event listener to each preset button
+// Click event listener to each preset button
+
 const presetButtons = document.querySelectorAll('.preset');
 presetButtons.forEach(button => {
     button.addEventListener('click', function() {
