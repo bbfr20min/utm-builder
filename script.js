@@ -18,6 +18,8 @@ document.getElementById('add-url').addEventListener('click', function() {
     urlCount++;
 });
 
+//Generating the links
+
 document.getElementById('utm-form').addEventListener('submit', function(event) {
     event.preventDefault();
 
@@ -37,7 +39,7 @@ document.getElementById('utm-form').addEventListener('submit', function(event) {
         newPara.textContent = utmUrl;
 
         let newButton = document.createElement('button');
-        newButton.textContent = 'Copy';
+        newButton.textContent = 'Copy URL';
         newButton.classList.add('copy-button');
         newButton.addEventListener('click', function() {
             let tempElement = document.createElement('textarea');
@@ -49,7 +51,7 @@ document.getElementById('utm-form').addEventListener('submit', function(event) {
 
             document.body.removeChild(tempElement);
 
-            alert('URL copied to clipboard!');
+            alert('Your URL is now ready for publishing!');
         });
 
         container.appendChild(newPara);
@@ -71,6 +73,7 @@ presetButtons.forEach(button => {
     });
 });
 
+// Building the UTM parameters
 
 function buildUTMUrl(baseURL, utmSource, utmMedium, utmCampaign) {
     let url = new URL(baseURL);
@@ -86,3 +89,13 @@ function buildUTMUrl(baseURL, utmSource, utmMedium, utmCampaign) {
 
     return url.toString();
 }
+
+//LinkedIn personal
+
+document.getElementById('linkedin-personal').addEventListener('click', function() {
+    let campaignInput = document.getElementById('campaign');
+    if (!campaignInput.value) {
+        alert('For LinkedIn - personal, the campaign parameter is mandatory. Please fill it out using your first name and first letter of your surname. After your enter campaign details click on the GENERATE URLs button');
+        campaignInput.focus(); // This will set focus to the campaign input for the user.
+    }
+});
