@@ -40,6 +40,10 @@ p {
     width: 100%;
 }
 
+.parameters {
+    margin: 30px 0;
+}
+
 .utm-builder h2,
 .utm-builder label {
     color: #07184D;
