@@ -98,3 +98,10 @@ document.getElementById('linkedin-personal').addEventListener('click', function(
         campaignInput.focus();
     }
 });
+
+// Click on logo refresh the page
+
+document.getElementById('refresh-logo').addEventListener('click', function(event) {
+    event.preventDefault(); // This prevents the default behavior of the anchor tag
+    location.reload();
+});

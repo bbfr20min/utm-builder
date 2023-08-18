@@ -119,6 +119,10 @@ footer {
     .utm-builder button {
         margin: 10px;
     }
+
+    .preset-buttons {
+        display: flex;
+    }
 }
 
 /* Additional styles for preset buttons */
