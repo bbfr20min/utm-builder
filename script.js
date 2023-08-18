@@ -18,7 +18,7 @@ document.getElementById('add-url').addEventListener('click', function() {
     urlCount++;
 });
 
-//Generating the links
+//Generating the links and COPY function
 
 document.getElementById('utm-form').addEventListener('submit', function(event) {
     event.preventDefault();
@@ -51,7 +51,7 @@ document.getElementById('utm-form').addEventListener('submit', function(event) {
 
             document.body.removeChild(tempElement);
 
-            alert('Your URL is now ready for publishing!');
+            alert('Your URL is now copied!');
         });
 
         container.appendChild(newPara);
@@ -91,12 +91,10 @@ function buildUTMUrl(baseURL, utmSource, utmMedium, utmCampaign) {
     return url.toString();
 }
 
-//LinkedIn personal
-
 document.getElementById('linkedin-personal').addEventListener('click', function() {
     let campaignInput = document.getElementById('campaign');
     if (!campaignInput.value) {
-        alert('For LinkedIn - personal, the campaign parameter is mandatory. Please fill it out using your first name and first letter of your surname. After your enter campaign details click on the GENERATE URLs button');
-        campaignInput.focus(); // This will set focus to the campaign input for the user.
+        alert('For LinkedIn - personal, the campaign parameter is mandatory. Please fill it out.');
+        campaignInput.focus();
     }
 });
