@@ -147,11 +147,12 @@ footer {
     }
 
     .utm-builder button {
-        margin: 10px;
+        margin: 5px;
     }
 
     .preset-buttons {
         display: flex;
+        flex-direction: column;
     }
 }
 
