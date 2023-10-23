@@ -124,6 +124,12 @@ button:hover {
     transform: scale(1.1);
 }
 
+button .fab {
+    color: white;  /* This ensures that the icon is white */
+    vertical-align: middle;  /* This will align the icon with the text */
+    margin-right: 4px;  /* Optional: this will add some space between the icon and the text */
+}
+
 footer {
     position: fixed;
     left: 0;
