@@ -26,6 +26,7 @@ document.getElementById('utm-form').addEventListener('submit', function(event) {
     let source = document.getElementById('source').value;
     let medium = document.getElementById('medium').value;
     let campaign = document.getElementById('campaign').value;
+    let term = document.getElementById('term').value;
 
     let container = document.getElementById('generated-urls-container');
     container.innerHTML = '';
@@ -33,7 +34,7 @@ document.getElementById('utm-form').addEventListener('submit', function(event) {
     for (let i = 0; i < urlCount; i++) {
         let url = document.getElementById('url-' + i).value;
 
-        let utmUrl = buildUTMUrl(url, source, medium, campaign);
+        let utmUrl = buildUTMUrl(url, source, medium, campaign, term);
 
         let newPara = document.createElement('p');
         newPara.textContent = utmUrl;
@@ -67,16 +68,18 @@ presetButtons.forEach(button => {
         const source = this.getAttribute('data-source');
         const medium = this.getAttribute('data-medium');
         const campaign = this.getAttribute('data-campaign');
+        const term = this.getAttribute('data-term');
         
         document.getElementById('source').value = source;
         document.getElementById('medium').value = medium;
         document.getElementById('campaign').value = campaign;
+        document.getElementById('term').value = term;
     });
 });
 
 // Building the UTM parameters
 
-function buildUTMUrl(baseURL, utmSource, utmMedium, utmCampaign) {
+function buildUTMUrl(baseURL, utmSource, utmMedium, utmCampaign, utmTerm) {
     let url = new URL(baseURL);
     if (utmSource) {
         url.searchParams.set('utm_source', utmSource);
@@ -87,9 +90,12 @@ function buildUTMUrl(baseURL, utmSource, utmMedium, utmCampaign) {
     if (utmCampaign) {
         url.searchParams.set('utm_campaign', utmCampaign);
     }
-
+    if (utmTerm) {
+        url.searchParams.set('utm_term', utmTerm);
+    }
     return url.toString();
 }
+
 
 document.getElementById('linkedin-personal').addEventListener('click', function() {
     let campaignInput = document.getElementById('campaign');
