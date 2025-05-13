@@ -10,7 +10,7 @@
 <body>
     <div class="container">
         <div class="logo-placeholder">
-            <a id="refresh-logo" href="/">
+            <a id="refresh-logo" href="#">
                 <img id="logo" src="img/logo.png" alt="20min logo" />
             </a>
             <p>click on the logo resets the page</p>
@@ -26,25 +26,39 @@
                 <button type="button" id="add-url">Add more URL(s)</button>
                 
                 <div class="utms">
+                    
+                    <h2 class="title">Social Media</h2>
+                    
                     <div class="preset-buttons">
                         <button class="preset" data-source="instagram" data-medium="social" data-campaign="story">IG</button>
                         <button class="preset" data-source="twitter" data-medium="social">xT</button>
-                        <button class="preset" data-source="whatsapp" data-medium="social" data-campaign="maindch" id="whatsapp-main">WA Main</button>
+                        <button class="preset" data-source="whatsapp" data-medium="social" data-campaign="maindch" id="whatsapp-main">WA Main</button>              
                         <button class="preset" data-source="whatsapp" data-medium="social" data-campaign="sportwa" id="whatsapp-main">WA Sport</button>
-                        <button class="preset" data-source="tiktok" data-medium="social">TikTok</button>
                         <button class="preset" data-source="whatsapp" data-medium="social" data-campaign="wirtschaftwa" id="whatsapp-main">WA Wirtschaft</button>
                         <button class="preset" data-source="threads" data-medium="social" data-campaign="threadsmain">Threads</button>
+                        <button class="preset" data-source="linkedin" data-medium="social">LnkDn org</button>
                     </div>
                     <div class="preset-buttons">
-                        <button class="preset" data-source="whatsapp" data-medium="social" data-campaign="esc_2025" id="whatsapp-main">WA ESC 2025</button>
-                        <button class="preset" data-source="linkedin" data-medium="social">LnkDn org</button>
                         <button class="preset" data-source="facebook" data-medium="social">FB org</button>
+                        <button class="preset" data-source="facebook" data-medium="broadcast">FB - broadcast</button>
+                        <button class="preset" data-source="telegram" data-medium="social" data-campaign="maindch" id="telegram-main">Telegram</button>
                         <button class="preset" data-source="pinterest" data-medium="social">Pinterest</button>
                         <button class="preset" data-source="resurf" data-medium="social">Resurf</button>
                         <button class="preset" data-source="snapchat" data-medium="social">Snapchat</button>
                         <button class="preset" data-source="reddit" data-medium="social">Reddit</button>
                     </div>
                     
+                <h2 class="title">NeXt GEN NewsLetter</h2>
+
+                <div class="preset-buttons">
+
+                    <button class="preset" data-source="newsletter" data-medium="email" data-campaign="personalized-newsletter" data-term="organic-nl">NL - Organic News</button>
+                    <button class="preset" data-source="newsletter" data-medium="email" data-campaign="personalized-newsletter" data-term="paid-nl">NL - Paid News</button>
+                
+
+                
+                </div>
+
                     <div class="parameters">
                         <label for="source">UTM Source:</label>
                         <input type="text" id="source" name="source">
@@ -52,6 +66,9 @@
                         <input type="text" id="medium" name="medium">
                         <label for="campaign">UTM Campaign:</label>
                         <input type="text" id="campaign" name="campaign">
+                        <label for="term">UTM Term:</label>
+                        <input type="text" id="term" name="term">
+
                     </div>
 
                     <button type="submit" id="generate-urls">Generate URLs</button>
